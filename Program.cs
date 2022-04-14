@@ -1,3 +1,5 @@
+
+
 namespace OilTycoonGame
 {
     internal static class Program
@@ -12,7 +14,7 @@ namespace OilTycoonGame
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run();
-
+            // here is where we should setup the loop and 
         }
     }
 }

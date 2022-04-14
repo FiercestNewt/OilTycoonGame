@@ -7,6 +7,7 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        private Player player = new Player();
         /// <summary>
         ///  Clean up any resources being used.
         /// </summary>
@@ -337,5 +338,15 @@
         private Button BuyARig_6;
         private Label description;
         private Button sellRig;
+    }
+
+    private void Startupgame()
+    {
+        // this is where we startup and do things for the game
+        while (true)
+        {
+            Sleep(1000); // 1000 is in miliseconds
+            this.player.BuyRig();
+        }
     }
 }
