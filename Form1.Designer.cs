@@ -346,7 +346,7 @@
         while (true)
         {
             Sleep(1000); // 1000 is in miliseconds
-            this.player.BuyRig();
+            
         }
     }
 }

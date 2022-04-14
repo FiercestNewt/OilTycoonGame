@@ -19,11 +19,13 @@ namespace OilTycoonGame
         public void BuyRefier(Rig r)
         {
             // add a rig to that refiner
+            // check to see if the player has the money
+            // give them a refiner if they do
         }
 
         public void UpgradeRig(Rig r)
         {
-
+            // upgrade the level of a rig, if they happen to have enough
         }
     }
 }
