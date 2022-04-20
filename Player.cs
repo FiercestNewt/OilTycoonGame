@@ -27,5 +27,22 @@ namespace OilTycoonGame
         {
             // upgrade the level of a rig, if they happen to have enough
         }
+
+        public int GetNextMoneyCollection()
+        {
+            int totalEarned;
+            for(var x = 0; x < this.rigs.Count; x++)
+            {
+                Rig currentRig = this.rigs[x];
+
+                int moneyAmount = currentRig.GetMoney();
+                totalEarned += moneyAmount;
+            }
+
+            // add the money to the data so that it is tracked
+            this.data.AddMoney(totalEarned);
+
+            return totalEarned;
+        }
     }
 }

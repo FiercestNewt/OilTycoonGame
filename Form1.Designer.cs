@@ -346,7 +346,13 @@
         while (true)
         {
             Sleep(1000); // 1000 is in miliseconds
-            
+
+            // we then need to give the player all of their money that they have 
+            // earned in the last second. adds all of the money to their balance
+            int moneyEarned = this.player.GetNextMoneyCollection();
+
+            // update the ui to refelect new money balance
+            this.label1.Text = "MONEY: " + toString(moneyEarned);
         }
     }
 }
