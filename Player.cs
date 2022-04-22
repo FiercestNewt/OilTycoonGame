@@ -30,7 +30,7 @@ namespace OilTycoonGame
 
         public int GetNextMoneyCollection()
         {
-            int totalEarned;
+            int totalEarned = 0;
             for(var x = 0; x < this.rigs.Count; x++)
             {
                 Rig currentRig = this.rigs[x];

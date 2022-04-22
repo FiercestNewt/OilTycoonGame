@@ -13,7 +13,7 @@ namespace OilTycoonGame
         public Form1()
         {
             InitializeComponent();
-            StartupGame();
+            Startupgame();
         }
 
         private void upgradeRig_Click(object sender, EventArgs e) // this is for upgrading the selected rig
