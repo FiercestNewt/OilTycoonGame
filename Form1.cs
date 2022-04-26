@@ -12,7 +12,7 @@ namespace OilTycoonGame
 
         public Form1()
         {
-            InitializeComponent();
+            ////InitializeComponent();
             //Startupgame();
         }
 

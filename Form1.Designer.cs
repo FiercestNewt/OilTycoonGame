@@ -342,20 +342,20 @@ namespace OilTycoonGame
         private Button sellRig;
 
 
-        private void Startupgame()
-        {
-            // this is where we startup and do things for the game
-            while (true)
-            {
-                Thread.Sleep(1000); // 1000 is in miliseconds
+    //    private void Startupgame()
+    //    {
+    //        // this is where we startup and do things for the game
+    //        while (true)
+    //        {
+    //            Thread.Sleep(1000); // 1000 is in miliseconds
 
-                // we then need to give the player all of their money that they have 
-                // earned in the last second. adds all of the money to their balance
-                int moneyEarned = this.player.GetNextMoneyCollection();
+    //            // we then need to give the player all of their money that they have 
+    //            // earned in the last second. adds all of the money to their balance
+    //            int moneyEarned = this.player.GetNextMoneyCollection();
 
-                // update the ui to refelect new money balance
-                this.label1.Text = "MONEY: " + " Terst";// + (moneyEarned);
-            }
-        }
+    //            // update the ui to refelect new money balance
+    //            this.label1.Text = "MONEY: " + " Terst";// + (moneyEarned);
+    //        }
+    //    }
     }
 }
