@@ -39,7 +39,10 @@ namespace OilTycoonGame
         }
         public void AddRefiner()
         {
-            this.refiner = new Refiner();
+            if (this.refiner == null)
+            {
+             this.refiner = new Refiner();
+            }
         }
         public void ChangeImage()
         {
@@ -80,12 +83,6 @@ namespace OilTycoonGame
             }
             this.totalMoneyEarned += this.moneyPerSecond;
             return this.moneyPerSecond;
-        }
-
-        public void Init()
-        {
-            //Thread.Sleep(1000);
-            //int m = this.GetMoney();
         }
     }
 }

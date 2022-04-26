@@ -354,7 +354,7 @@ namespace OilTycoonGame
                 int moneyEarned = this.player.GetNextMoneyCollection();
 
                 // update the ui to refelect new money balance
-                this.label1.Text = "MONEY: " + (moneyEarned);
+                this.label1.Text = "MONEY: " + " Terst";// + (moneyEarned);
             }
         }
     }

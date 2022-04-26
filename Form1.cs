@@ -13,7 +13,7 @@ namespace OilTycoonGame
         public Form1()
         {
             InitializeComponent();
-            Startupgame();
+            //Startupgame();
         }
 
         private void upgradeRig_Click(object sender, EventArgs e) // this is for upgrading the selected rig
@@ -65,6 +65,7 @@ namespace OilTycoonGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Console.WriteLine("Test afiojasfojel;f");
             description.Text += "testing";
         }
     }

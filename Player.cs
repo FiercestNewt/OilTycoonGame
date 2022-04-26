@@ -7,7 +7,7 @@ namespace OilTycoonGame
 {
     internal class Player
     {
-        public PlayerData data;
+        public PlayerData data = new PlayerData();
         public List<Rig> rigs = new List<Rig>();
         
         public void BuyRig(System.Drawing.Bitmap rigImage, System.Windows.Forms.Button rigBtn)
@@ -21,6 +21,7 @@ namespace OilTycoonGame
             // add a rig to that refiner
             // check to see if the player has the money
             // give them a refiner if they do
+            data.AddMoney(10);
         }
 
         public void UpgradeRig(Rig r)
