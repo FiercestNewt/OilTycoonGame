@@ -21,24 +21,17 @@ namespace OilTycoonGame
         private int timesRun;
         private void Startupgame(Object myObject, EventArgs myEventArgs)
         {
-            //timer.Stop();
+           // timer.Stop();
 
             // this is where we startup and do things for the game
             // we then need to give the player all of their money that they have 
             // earned in the last second. adds all of the money to their balance
             int moneyEarned = this.player.GetNextMoneyCollection();
-
+            timesRun++;
             // update the ui to refelect new money balance
-            this.description.Text = moneyEarned.ToString();//"MONEY: " + " Test";// + (moneyEarned);
+            this.description.Text = timesRun.ToString();//moneyEarned.ToString();//"MONEY: " + " Test";// + (moneyEarned);
+
             
-            if (timesRun > 10)
-            {
-                shouldContinue = false;
-            }
-            else
-            {
-                timer.Enabled = true;
-            }
 
         }
 
@@ -48,13 +41,9 @@ namespace OilTycoonGame
             timer.Interval = 1000; // miliseconds
             timer.Start();
 
-            timesRun++;
-            //while (shouldContinue)
-            //{
-            //    //Application.DoEvents();
-            //}
+            
 
-    }
+        }
         /// //////////////////////////////////////////////////////////////////////////
 
         public Form1()
