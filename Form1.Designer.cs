@@ -54,9 +54,11 @@ namespace OilTycoonGame
             this.ButARig_5 = new System.Windows.Forms.Button();
             this.BuyARig_6 = new System.Windows.Forms.Button();
             this.description = new System.Windows.Forms.Label();
+            this.RigBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RigBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -285,12 +287,24 @@ namespace OilTycoonGame
             this.description.TabIndex = 14;
             this.description.Text = resources.GetString("description.Text");
             // 
+            // RigBox1
+            // 
+            this.RigBox1.BackColor = System.Drawing.Color.Transparent;
+            this.RigBox1.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level2;
+            this.RigBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RigBox1.Location = new System.Drawing.Point(23, 85);
+            this.RigBox1.Name = "RigBox1";
+            this.RigBox1.Size = new System.Drawing.Size(92, 92);
+            this.RigBox1.TabIndex = 15;
+            this.RigBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(661, 591);
+            this.Controls.Add(this.RigBox1);
             this.Controls.Add(this.description);
             this.Controls.Add(this.BuyARig_6);
             this.Controls.Add(this.ButARig_5);
@@ -305,12 +319,12 @@ namespace OilTycoonGame
             this.MinimumSize = new System.Drawing.Size(677, 630);
             this.Name = "Form1";
             this.Text = "Oil Tycoon";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statsPanel.ResumeLayout(false);
             this.statsPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RigBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +354,6 @@ namespace OilTycoonGame
         private Button BuyARig_6;
         private Label description;
         private Button sellRig;
+        private PictureBox RigBox1;
     }
 }

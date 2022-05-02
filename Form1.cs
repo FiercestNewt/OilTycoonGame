@@ -21,7 +21,6 @@ namespace OilTycoonGame
         private int timesRun;
         private void Startupgame(Object myObject, EventArgs myEventArgs)
         {
-           // timer.Stop();
 
             // this is where we startup and do things for the game
             // we then need to give the player all of their money that they have 
@@ -31,8 +30,9 @@ namespace OilTycoonGame
             // update the ui to refelect new money balance
             this.description.Text = timesRun.ToString();//moneyEarned.ToString();//"MONEY: " + " Test";// + (moneyEarned);
 
-            
-
+            // label1 is the MONEY:
+            // label2 is the RIGS:
+            // label3 is the REFINERS:
         }
 
         private void Run()
@@ -40,8 +40,6 @@ namespace OilTycoonGame
             timer.Tick += new EventHandler(Startupgame);
             timer.Interval = 1000; // miliseconds
             timer.Start();
-
-            
 
         }
         /// //////////////////////////////////////////////////////////////////////////
@@ -97,11 +95,6 @@ namespace OilTycoonGame
         private void sellRig_Click(object sender, EventArgs e) // sell a rig
         {
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.description.Text += "testing";
         }
     }
 }
