@@ -14,10 +14,10 @@ namespace OilTycoonGame
         private System.Drawing.Bitmap? image = null;
         private System.Windows.Forms.Button? button = null;
 
-        public Rig(System.Drawing.Bitmap rigImage, System.Windows.Forms.Button rigBtn)
+        public Rig(System.Windows.Forms.Button rigBtn)
         {
-            this.image = rigImage;
-            this.button = rigBtn;
+            //this.image = rigImage;
+            //this.button = rigBtn;
         }
 
         // sell a rig and get some money for it based on its level

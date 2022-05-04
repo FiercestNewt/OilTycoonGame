@@ -8,12 +8,14 @@ namespace OilTycoonGame
     internal class Player
     {
         public PlayerData data = new PlayerData();
-        public List<Rig> rigs = new List<Rig>();
+        public List<Rig> rigs = new List<Rig>(6);
         
-        public void BuyRig(System.Drawing.Bitmap rigImage, System.Windows.Forms.Button rigBtn)
+        public int BuyRig(System.Windows.Forms.Button rigBtn) //System.Drawing.Bitmap rigImage, 
         {
-            Rig r = new Rig(rigImage, rigBtn);
-            rigs.Add(r);
+            int numberPos = (rigBtn.Name[rigBtn.Name.Length - 1]);
+            Rig r = new Rig(rigBtn);
+            return numberPos;
+            //rigs[numberPos - 1] = r;
         }
 
         public void BuyRefier(Rig r)

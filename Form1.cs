@@ -17,8 +17,8 @@ namespace OilTycoonGame
         /// here is the main code for running the game
         /// </summary>
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-        private bool shouldContinue = true;
         private int timesRun;
+        //private Rig currentSelected;
         private void Startupgame(Object myObject, EventArgs myEventArgs)
         {
 
@@ -28,7 +28,7 @@ namespace OilTycoonGame
             int moneyEarned = this.player.GetNextMoneyCollection();
             timesRun++;
             // update the ui to refelect new money balance
-            this.description.Text = timesRun.ToString();//moneyEarned.ToString();//"MONEY: " + " Test";// + (moneyEarned);
+            // this.description.Text = timesRun.ToString();//moneyEarned.ToString();//"MONEY: " + " Test";// + (moneyEarned);
 
             // label1 is the MONEY:
             // label2 is the RIGS:
@@ -65,11 +65,14 @@ namespace OilTycoonGame
             //System.Windows.Forms.PictureBox image = generate(this.BuyARig_1);
             //this.BuyARig_1.Visible = false;
             //image.Image = global::OilTycoonGame.Properties.Resources.Level2;
+            int num = this.player.BuyRig(BuyARig_1);
+            this.RigNumber1.Visible = true;
+            this.moneyPerSecondLbl.Text = num.ToString();  
         }
 
         private void BuyARig_2_Click(object sender, EventArgs e) // buy a rig at pos 2
         {
-
+            
         }
 
         private void BuyARig_3_Click(object sender, EventArgs e) // buy a rig at pos 3
@@ -95,6 +98,44 @@ namespace OilTycoonGame
         private void sellRig_Click(object sender, EventArgs e) // sell a rig
         {
 
+        }
+
+        private void RigNumber1_Click(object sender, EventArgs e)
+        {
+            Rig tester = this.player.rigs[1];
+            if (tester != null)
+            {
+                MPS_Shower.Text = "$ " + tester.moneyPerSecond.ToString();
+            }
+            else
+            {
+                MPS_Shower.Text = "This is a test";
+            }
+        }
+
+        private void RigNumber2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RigNumber3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RigNumber4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RigNumber5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RigNumber6_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

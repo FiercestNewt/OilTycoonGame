@@ -54,11 +54,21 @@ namespace OilTycoonGame
             this.ButARig_5 = new System.Windows.Forms.Button();
             this.BuyARig_6 = new System.Windows.Forms.Button();
             this.description = new System.Windows.Forms.Label();
-            this.RigBox1 = new System.Windows.Forms.PictureBox();
+            this.RigNumber1 = new System.Windows.Forms.PictureBox();
+            this.RigNumber2 = new System.Windows.Forms.PictureBox();
+            this.RigNumber3 = new System.Windows.Forms.PictureBox();
+            this.RigNumber4 = new System.Windows.Forms.PictureBox();
+            this.RigNumber5 = new System.Windows.Forms.PictureBox();
+            this.RigNumber6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RigBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -220,7 +230,7 @@ namespace OilTycoonGame
             // 
             // BuyARig_1
             // 
-            this.BuyARig_1.Location = new System.Drawing.Point(23, 102);
+            this.BuyARig_1.Location = new System.Drawing.Point(42, 133);
             this.BuyARig_1.Name = "BuyARig_1";
             this.BuyARig_1.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_1.TabIndex = 8;
@@ -287,16 +297,83 @@ namespace OilTycoonGame
             this.description.TabIndex = 14;
             this.description.Text = resources.GetString("description.Text");
             // 
-            // RigBox1
+            // RigNumber1
             // 
-            this.RigBox1.BackColor = System.Drawing.Color.Transparent;
-            this.RigBox1.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level2;
-            this.RigBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.RigBox1.Location = new System.Drawing.Point(23, 85);
-            this.RigBox1.Name = "RigBox1";
-            this.RigBox1.Size = new System.Drawing.Size(92, 92);
-            this.RigBox1.TabIndex = 15;
-            this.RigBox1.TabStop = false;
+            this.RigNumber1.BackColor = System.Drawing.Color.Transparent;
+            this.RigNumber1.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level1;
+            this.RigNumber1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RigNumber1.Location = new System.Drawing.Point(50, 120);
+            this.RigNumber1.Name = "RigNumber1";
+            this.RigNumber1.Size = new System.Drawing.Size(66, 66);
+            this.RigNumber1.TabIndex = 15;
+            this.RigNumber1.TabStop = false;
+            this.RigNumber1.Visible = false;
+            this.RigNumber1.Click += new System.EventHandler(this.RigNumber1_Click);
+            // 
+            // RigNumber2
+            // 
+            this.RigNumber2.BackColor = System.Drawing.Color.Transparent;
+            this.RigNumber2.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level1;
+            this.RigNumber2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RigNumber2.Location = new System.Drawing.Point(61, 270);
+            this.RigNumber2.Name = "RigNumber2";
+            this.RigNumber2.Size = new System.Drawing.Size(66, 66);
+            this.RigNumber2.TabIndex = 16;
+            this.RigNumber2.TabStop = false;
+            this.RigNumber2.Visible = false;
+            this.RigNumber2.Click += new System.EventHandler(this.RigNumber2_Click);
+            // 
+            // RigNumber3
+            // 
+            this.RigNumber3.BackColor = System.Drawing.Color.Transparent;
+            this.RigNumber3.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level1;
+            this.RigNumber3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RigNumber3.Location = new System.Drawing.Point(187, 402);
+            this.RigNumber3.Name = "RigNumber3";
+            this.RigNumber3.Size = new System.Drawing.Size(66, 66);
+            this.RigNumber3.TabIndex = 17;
+            this.RigNumber3.TabStop = false;
+            this.RigNumber3.Visible = false;
+            this.RigNumber3.Click += new System.EventHandler(this.RigNumber3_Click);
+            // 
+            // RigNumber4
+            // 
+            this.RigNumber4.BackColor = System.Drawing.Color.Transparent;
+            this.RigNumber4.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level1;
+            this.RigNumber4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RigNumber4.Location = new System.Drawing.Point(305, 209);
+            this.RigNumber4.Name = "RigNumber4";
+            this.RigNumber4.Size = new System.Drawing.Size(66, 66);
+            this.RigNumber4.TabIndex = 18;
+            this.RigNumber4.TabStop = false;
+            this.RigNumber4.Visible = false;
+            this.RigNumber4.Click += new System.EventHandler(this.RigNumber4_Click);
+            // 
+            // RigNumber5
+            // 
+            this.RigNumber5.BackColor = System.Drawing.Color.Transparent;
+            this.RigNumber5.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level1;
+            this.RigNumber5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RigNumber5.Location = new System.Drawing.Point(322, 44);
+            this.RigNumber5.Name = "RigNumber5";
+            this.RigNumber5.Size = new System.Drawing.Size(66, 66);
+            this.RigNumber5.TabIndex = 19;
+            this.RigNumber5.TabStop = false;
+            this.RigNumber5.Visible = false;
+            this.RigNumber5.Click += new System.EventHandler(this.RigNumber5_Click);
+            // 
+            // RigNumber6
+            // 
+            this.RigNumber6.BackColor = System.Drawing.Color.Transparent;
+            this.RigNumber6.BackgroundImage = global::OilTycoonGame.Properties.Resources.Level1;
+            this.RigNumber6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RigNumber6.Location = new System.Drawing.Point(370, 364);
+            this.RigNumber6.Name = "RigNumber6";
+            this.RigNumber6.Size = new System.Drawing.Size(66, 66);
+            this.RigNumber6.TabIndex = 20;
+            this.RigNumber6.TabStop = false;
+            this.RigNumber6.Visible = false;
+            this.RigNumber6.Click += new System.EventHandler(this.RigNumber6_Click);
             // 
             // Form1
             // 
@@ -304,14 +381,19 @@ namespace OilTycoonGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(661, 591);
-            this.Controls.Add(this.RigBox1);
+            this.Controls.Add(this.RigNumber6);
+            this.Controls.Add(this.RigNumber5);
+            this.Controls.Add(this.RigNumber4);
+            this.Controls.Add(this.RigNumber3);
+            this.Controls.Add(this.RigNumber2);
+            this.Controls.Add(this.RigNumber1);
+            this.Controls.Add(this.BuyARig_1);
             this.Controls.Add(this.description);
             this.Controls.Add(this.BuyARig_6);
             this.Controls.Add(this.ButARig_5);
             this.Controls.Add(this.BuyARig_4);
             this.Controls.Add(this.BuyARig_3);
             this.Controls.Add(this.BuyARig_2);
-            this.Controls.Add(this.BuyARig_1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statsPanel);
@@ -324,7 +406,12 @@ namespace OilTycoonGame
             this.statsPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RigBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RigNumber6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,6 +441,11 @@ namespace OilTycoonGame
         private Button BuyARig_6;
         private Label description;
         private Button sellRig;
-        private PictureBox RigBox1;
+        private PictureBox RigNumber1;
+        private PictureBox RigNumber2;
+        private PictureBox RigNumber3;
+        private PictureBox RigNumber4;
+        private PictureBox RigNumber5;
+        private PictureBox RigNumber6;
     }
 }
