@@ -12,7 +12,8 @@ namespace OilTycoonGame
         
         public int BuyRig(System.Windows.Forms.Button rigBtn) //System.Drawing.Bitmap rigImage, 
         {
-            int numberPos = (rigBtn.Name[rigBtn.Name.Length - 1]);
+            char num = rigBtn.Name[rigBtn.Name.Length - 1];
+            int numberPos = int.Parse(num.ToString());
             Rig r = new Rig(rigBtn);
             return numberPos;
             //rigs[numberPos - 1] = r;
