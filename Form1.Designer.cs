@@ -165,6 +165,7 @@ namespace OilTycoonGame
             // 
             // sellRig
             // 
+            this.sellRig.CausesValidation = false;
             this.sellRig.Location = new System.Drawing.Point(427, 21);
             this.sellRig.Name = "sellRig";
             this.sellRig.Size = new System.Drawing.Size(76, 23);
@@ -176,6 +177,7 @@ namespace OilTycoonGame
             // 
             // buyRefiner
             // 
+            this.buyRefiner.CausesValidation = false;
             this.buyRefiner.Location = new System.Drawing.Point(346, 21);
             this.buyRefiner.Name = "buyRefiner";
             this.buyRefiner.Size = new System.Drawing.Size(75, 23);
@@ -186,6 +188,7 @@ namespace OilTycoonGame
             // 
             // upgradeRig
             // 
+            this.upgradeRig.CausesValidation = false;
             this.upgradeRig.Location = new System.Drawing.Point(265, 21);
             this.upgradeRig.Name = "upgradeRig";
             this.upgradeRig.Size = new System.Drawing.Size(75, 23);
@@ -232,60 +235,72 @@ namespace OilTycoonGame
             // 
             // BuyARig_1
             // 
+            this.BuyARig_1.CausesValidation = false;
             this.BuyARig_1.Location = new System.Drawing.Point(42, 133);
             this.BuyARig_1.Name = "BuyARig_1";
             this.BuyARig_1.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_1.TabIndex = 8;
+            this.BuyARig_1.TabStop = false;
             this.BuyARig_1.Text = "BUY A NEW RIG";
             this.BuyARig_1.UseVisualStyleBackColor = true;
             this.BuyARig_1.Click += new System.EventHandler(this.BuyARig_1_Click);
             // 
             // BuyARig_2
             // 
+            this.BuyARig_2.CausesValidation = false;
             this.BuyARig_2.Location = new System.Drawing.Point(54, 283);
             this.BuyARig_2.Name = "BuyARig_2";
             this.BuyARig_2.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_2.TabIndex = 9;
+            this.BuyARig_2.TabStop = false;
             this.BuyARig_2.Text = "BUY A NEW RIG";
             this.BuyARig_2.UseVisualStyleBackColor = true;
             this.BuyARig_2.Click += new System.EventHandler(this.BuyARig_2_Click);
             // 
             // BuyARig_3
             // 
+            this.BuyARig_3.CausesValidation = false;
             this.BuyARig_3.Location = new System.Drawing.Point(179, 413);
             this.BuyARig_3.Name = "BuyARig_3";
             this.BuyARig_3.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_3.TabIndex = 10;
+            this.BuyARig_3.TabStop = false;
             this.BuyARig_3.Text = "BUY A NEW RIG";
             this.BuyARig_3.UseVisualStyleBackColor = true;
             this.BuyARig_3.Click += new System.EventHandler(this.BuyARig_3_Click);
             // 
             // BuyARig_4
             // 
+            this.BuyARig_4.CausesValidation = false;
             this.BuyARig_4.Location = new System.Drawing.Point(297, 224);
             this.BuyARig_4.Name = "BuyARig_4";
             this.BuyARig_4.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_4.TabIndex = 11;
+            this.BuyARig_4.TabStop = false;
             this.BuyARig_4.Text = "BUY A NEW RIG";
             this.BuyARig_4.UseVisualStyleBackColor = true;
             this.BuyARig_4.Click += new System.EventHandler(this.BuyARig_4_Click);
             // 
             // BuyARig_5
             // 
+            this.BuyARig_5.CausesValidation = false;
             this.BuyARig_5.Location = new System.Drawing.Point(314, 59);
             this.BuyARig_5.Name = "BuyARig_5";
             this.BuyARig_5.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_5.TabIndex = 12;
+            this.BuyARig_5.TabStop = false;
             this.BuyARig_5.Text = "BUY A NEW RIG";
             this.BuyARig_5.UseVisualStyleBackColor = true;
             this.BuyARig_5.Click += new System.EventHandler(this.BuyARig_5_Click);
             // 
             // BuyARig_6
             // 
+            this.BuyARig_6.CausesValidation = false;
             this.BuyARig_6.Location = new System.Drawing.Point(363, 377);
             this.BuyARig_6.Name = "BuyARig_6";
             this.BuyARig_6.Size = new System.Drawing.Size(81, 38);
             this.BuyARig_6.TabIndex = 13;
+            this.BuyARig_6.TabStop = false;
             this.BuyARig_6.Text = "BUY A NEW RIG";
             this.BuyARig_6.UseVisualStyleBackColor = true;
             this.BuyARig_6.Click += new System.EventHandler(this.BuyARig_6_Click);

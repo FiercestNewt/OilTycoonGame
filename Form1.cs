@@ -54,14 +54,18 @@ namespace OilTycoonGame
 
                 if (currentBox != null)
                 {
-                    currentBox.BorderStyle = BorderStyle.Fixed3D;
+                    currentBox.BorderStyle = BorderStyle.None;
+                    currentBox.BackColor = Color.Transparent;
                 }
+                newBox.BorderStyle = BorderStyle.Fixed3D;
+                newBox.BackColor = Color.DodgerBlue;
                 currentBox = newBox;
+                UpdateMoney();
             }
-            else
-            {
-                // they do not have enough money
-            }
+            //else
+            //{
+            //    // they do not have enough money
+            //}
         }
         private void Startupgame(Object myObject, EventArgs myEventArgs)
         {
@@ -124,9 +128,10 @@ namespace OilTycoonGame
             //this.BuyARig_1.Visible = false;
             //image.Image = global::OilTycoonGame.Properties.Resources.Level2;
             UpdateRigData(this.player.BuyRig(BuyARig_1, RigNumber1));
-            this.RigNumber1.Visible = true;
-            this.BuyARig_1.Visible = false;
-            UpdateMoney();
+            //this.RigNumber1.Visible = true;
+            //this.BuyARig_1.Visible = false;
+            //UpdateMoney();
+            handleRigClick(this.BuyARig_1, this.RigNumber1);
         }
 
         private void BuyARig_2_Click(object sender, EventArgs e) // buy a rig at pos 2
