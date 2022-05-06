@@ -51,7 +51,7 @@ namespace OilTycoonGame
             this.BuyARig_2 = new System.Windows.Forms.Button();
             this.BuyARig_3 = new System.Windows.Forms.Button();
             this.BuyARig_4 = new System.Windows.Forms.Button();
-            this.ButARig_5 = new System.Windows.Forms.Button();
+            this.BuyARig_5 = new System.Windows.Forms.Button();
             this.BuyARig_6 = new System.Windows.Forms.Button();
             this.description = new System.Windows.Forms.Label();
             this.RigNumber1 = new System.Windows.Forms.PictureBox();
@@ -60,6 +60,7 @@ namespace OilTycoonGame
             this.RigNumber4 = new System.Windows.Forms.PictureBox();
             this.RigNumber5 = new System.Windows.Forms.PictureBox();
             this.RigNumber6 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -170,6 +171,7 @@ namespace OilTycoonGame
             this.sellRig.TabIndex = 13;
             this.sellRig.Text = "Sell";
             this.sellRig.UseVisualStyleBackColor = true;
+            this.sellRig.Visible = false;
             this.sellRig.Click += new System.EventHandler(this.sellRig_Click);
             // 
             // buyRefiner
@@ -268,15 +270,15 @@ namespace OilTycoonGame
             this.BuyARig_4.UseVisualStyleBackColor = true;
             this.BuyARig_4.Click += new System.EventHandler(this.BuyARig_4_Click);
             // 
-            // ButARig_5
+            // BuyARig_5
             // 
-            this.ButARig_5.Location = new System.Drawing.Point(314, 59);
-            this.ButARig_5.Name = "ButARig_5";
-            this.ButARig_5.Size = new System.Drawing.Size(81, 38);
-            this.ButARig_5.TabIndex = 12;
-            this.ButARig_5.Text = "BUY A NEW RIG";
-            this.ButARig_5.UseVisualStyleBackColor = true;
-            this.ButARig_5.Click += new System.EventHandler(this.ButARig_5_Click);
+            this.BuyARig_5.Location = new System.Drawing.Point(314, 59);
+            this.BuyARig_5.Name = "BuyARig_5";
+            this.BuyARig_5.Size = new System.Drawing.Size(81, 38);
+            this.BuyARig_5.TabIndex = 12;
+            this.BuyARig_5.Text = "BUY A NEW RIG";
+            this.BuyARig_5.UseVisualStyleBackColor = true;
+            this.BuyARig_5.Click += new System.EventHandler(this.BuyARig_5_Click);
             // 
             // BuyARig_6
             // 
@@ -375,12 +377,24 @@ namespace OilTycoonGame
             this.RigNumber6.Visible = false;
             this.RigNumber6.Click += new System.EventHandler(this.RigNumber6_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(518, 389);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 135);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "PRICES:\r\n     RIG:\r\n          Level 1: $10\r\n          Level 1: $20\r\n          Lev" +
+    "el 1: $40\r\n          Level 1: $60\r\n          Level 1: $80\r\n     Refiners:\r\n     " +
+    "     $30";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(661, 591);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.RigNumber6);
             this.Controls.Add(this.RigNumber5);
             this.Controls.Add(this.RigNumber4);
@@ -390,7 +404,7 @@ namespace OilTycoonGame
             this.Controls.Add(this.BuyARig_1);
             this.Controls.Add(this.description);
             this.Controls.Add(this.BuyARig_6);
-            this.Controls.Add(this.ButARig_5);
+            this.Controls.Add(this.BuyARig_5);
             this.Controls.Add(this.BuyARig_4);
             this.Controls.Add(this.BuyARig_3);
             this.Controls.Add(this.BuyARig_2);
@@ -437,7 +451,7 @@ namespace OilTycoonGame
         private Button BuyARig_2;
         private Button BuyARig_3;
         private Button BuyARig_4;
-        private Button ButARig_5;
+        private Button BuyARig_5;
         private Button BuyARig_6;
         private Label description;
         private Button sellRig;
@@ -447,5 +461,6 @@ namespace OilTycoonGame
         private PictureBox RigNumber4;
         private PictureBox RigNumber5;
         private PictureBox RigNumber6;
+        private Label label5;
     }
 }

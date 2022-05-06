@@ -8,28 +8,60 @@ namespace OilTycoonGame
     internal class Player
     {
         public PlayerData data = new PlayerData();
-        public List<Rig> rigs = new List<Rig>(6);
-        
-        public int BuyRig(System.Windows.Forms.Button rigBtn) //System.Drawing.Bitmap rigImage, 
+        public List<Rig> rigs = new List<Rig>();
+        private int RigPrice = 10;
+        private int RefinerPrice = 30;
+
+        public Rig? BuyRig(System.Windows.Forms.Button rigBtn, System.Windows.Forms.PictureBox instance) //System.Drawing.Bitmap rigImage, 
         {
-            char num = rigBtn.Name[rigBtn.Name.Length - 1];
-            int numberPos = int.Parse(num.ToString());
-            Rig r = new Rig(rigBtn);
-            return numberPos;
-            //rigs[numberPos - 1] = r;
+            if (this.data.money >= this.RigPrice)
+            {
+                this.data.RemoveMoney(RigPrice);
+                char num = rigBtn.Name[rigBtn.Name.Length - 1];
+                int numberPos = int.Parse(num.ToString()) - 1;
+                Rig r = new Rig(numberPos, instance);
+                rigs.Add(r);
+                return r;
+            }
+            return null;
+
         }
 
-        public void BuyRefier(Rig r)
+        public Rig? GetRig(int id)
+        {
+            if (this.rigs.Count >= 1)
+            {
+                for (int x = 0; x < this.rigs.Count; x++)
+                {
+                    if (this.rigs.ElementAt(x).id == id)
+                    {
+                        return this.rigs[x];
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void BuyRefiner(Rig r)
         {
             // add a rig to that refiner
             // check to see if the player has the money
             // give them a refiner if they do
-            data.AddMoney(10);
+            if (r.refiner == null && this.data.money >= this.RefinerPrice)
+            {
+                r.AddRefiner();
+                this.data.RemoveMoney(RefinerPrice);
+            }
         }
 
         public void UpgradeRig(Rig r)
         {
             // upgrade the level of a rig, if they happen to have enough
+            if (this.data.money >= RigPrice * 2 * (r.currentLevel) && r.currentLevel < 5)
+            {
+                this.data.RemoveMoney(RigPrice * 2 * (r.currentLevel));
+                r.Upgrade();
+            }
         }
 
         public int GetNextMoneyCollection()

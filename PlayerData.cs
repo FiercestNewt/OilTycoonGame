@@ -6,7 +6,7 @@ namespace OilTycoonGame
 {
     class PlayerData
     {
-        public int money = 0;
+        public int money = 10; // so that the player can start by buying a rig.
         public int totalMoneyPerSecond = 0;
         public int lifetimeMoney = 0;
 

@@ -9,13 +9,16 @@ namespace OilTycoonGame
     {
         public int moneyPerSecond = 5;
         public int currentLevel = 1;
-        private Refiner? refiner = null;
+        public Refiner? refiner = null;
         private int totalMoneyEarned = 0;
         private System.Drawing.Bitmap? image = null;
-        private System.Windows.Forms.Button? button = null;
+        private System.Windows.Forms.PictureBox? instance = null;
+        public int id;
 
-        public Rig(System.Windows.Forms.Button rigBtn)
+        public Rig(int id, System.Windows.Forms.PictureBox instance /*System.Windows.Forms.Button rigBtn*/)
         {
+            this.id = id;
+            this.instance = instance;
             //this.image = rigImage;
             //this.button = rigBtn;
         }
@@ -32,7 +35,7 @@ namespace OilTycoonGame
             if(this.currentLevel < 5)
             {
                 this.currentLevel++;
-                this.moneyPerSecond = this.currentLevel ^ 2 + 5;
+                this.moneyPerSecond = this.currentLevel * this.currentLevel + 5;
                 this.ChangeImage();
             }
 
@@ -41,7 +44,8 @@ namespace OilTycoonGame
         {
             if (this.refiner == null)
             {
-             this.refiner = new Refiner();
+                this.refiner = new Refiner();
+                moneyPerSecond *= 2;
             }
         }
         public void ChangeImage()
@@ -66,9 +70,9 @@ namespace OilTycoonGame
                 this.image = global::OilTycoonGame.Properties.Resources.Level5;
             }
             // just to shut up the intellesese. I know I slaughtered that. and that. lol...
-            if(this.button != null)
+            if(this.instance != null)
             {
-                this.button.Image = this.image;
+                this.instance.BackgroundImage = this.image;
             }
             
         }
