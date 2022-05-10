@@ -5,13 +5,6 @@ namespace OilTycoonGame
 {
     public partial class Form1 : Form
     {
-        //public System.Windows.Forms.PictureBox generate(System.Windows.Forms.Button button)
-        //{
-        //    System.Windows.Forms.PictureBox ImageBox = new System.Windows.Forms.PictureBox();
-        //    ImageBox.Location = button.Location;
-        //    ImageBox.Size = button.Size;
-        //    return ImageBox;
-        //}
 
         /// <summary>
         /// here is the main code for running the game
