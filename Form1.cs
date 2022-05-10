@@ -17,7 +17,6 @@ namespace OilTycoonGame
         /// here is the main code for running the game
         /// </summary>
         private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-        private int timesRun = 1;
         private Rig? currentRig;
         private System.Windows.Forms.PictureBox? currentBox;
 
@@ -39,33 +38,35 @@ namespace OilTycoonGame
                 currentRig = r;
             }
         }
-        private void handleRigClick(System.Windows.Forms.Button btn, System.Windows.Forms.PictureBox newBox)
+        private void changeColors(System.Windows.Forms.PictureBox pictureBox)
         {
-            //UpdateRigData(this.player.BuyRig(BuyARig_2, RigNumber2));
-            //this.RigNumber2.Visible = true;
-            //this.BuyARig_2.Visible = false;
-            //UpdateMoney();
-            Rig? boughtRig = this.player.BuyRig(btn, newBox);
-            if (boughtRig != null)
+            if (pictureBox.Visible)
             {
-                // make the outline show so that the player can see the current selected
-                btn.Visible = false;
-                newBox.Visible = true;
-
                 if (currentBox != null)
                 {
                     currentBox.BorderStyle = BorderStyle.None;
                     currentBox.BackColor = Color.Transparent;
                 }
-                newBox.BorderStyle = BorderStyle.Fixed3D;
-                newBox.BackColor = Color.DodgerBlue;
-                currentBox = newBox;
+                pictureBox.BorderStyle = BorderStyle.Fixed3D;
+                pictureBox.BackColor = Color.DodgerBlue;
+                currentBox = pictureBox;
+            }
+
+        }
+        private void handleRigClick(System.Windows.Forms.Button btn, System.Windows.Forms.PictureBox newBox)
+        {
+            Rig? boughtRig = this.player.BuyRig(btn, newBox);
+            if (boughtRig != null)
+            {
+                // they have bought a new box
+                // make the outline show so that the player can see the current selected
+                newBox.Visible = true;
+                btn.Visible = false;
+                changeColors(newBox);
+                UpdateRigData(boughtRig);
+
                 UpdateMoney();
             }
-            //else
-            //{
-            //    // they do not have enough money
-            //}
         }
         private void Startupgame(Object myObject, EventArgs myEventArgs)
         {
@@ -83,8 +84,7 @@ namespace OilTycoonGame
             // label3 is the REFINERS:
             UpdateMoney();
             this.label2.Text = "RIGS: " + this.player.rigs.Count.ToString();
-            this.label3.Text = "TIMES RUN: " + timesRun.ToString();
-            timesRun++;
+            this.label3.Text = "REFINERS: " + this.player.refiners.Count.ToString();
         }
 
         private void Run()
@@ -124,59 +124,37 @@ namespace OilTycoonGame
 
         private void BuyARig_1_Click(object sender, EventArgs e) // buy a rig at pos 1
         {
-            //System.Windows.Forms.PictureBox image = generate(this.BuyARig_1);
-            //this.BuyARig_1.Visible = false;
-            //image.Image = global::OilTycoonGame.Properties.Resources.Level2;
-            UpdateRigData(this.player.BuyRig(BuyARig_1, RigNumber1));
-            //this.RigNumber1.Visible = true;
-            //this.BuyARig_1.Visible = false;
-            //UpdateMoney();
             handleRigClick(this.BuyARig_1, this.RigNumber1);
         }
 
         private void BuyARig_2_Click(object sender, EventArgs e) // buy a rig at pos 2
         {
-            UpdateRigData(this.player.BuyRig(BuyARig_2, RigNumber2));
-            this.RigNumber2.Visible = true;
-            this.BuyARig_2.Visible = false;
-            UpdateMoney();
+            handleRigClick(this.BuyARig_2, this.RigNumber2);
         }
 
         private void BuyARig_3_Click(object sender, EventArgs e) // buy a rig at pos 3
         {
-            UpdateRigData(this.player.BuyRig(BuyARig_3, RigNumber3));
-            this.RigNumber3.Visible = true;
-            this.BuyARig_3.Visible = false;
-            UpdateMoney();
+            handleRigClick(this.BuyARig_3, this.RigNumber3);
         }
 
         private void BuyARig_4_Click(object sender, EventArgs e) // buy a rig at pos 4
         {
-            UpdateRigData(this.player.BuyRig(BuyARig_4, RigNumber4));
-            this.RigNumber4.Visible = true;
-            this.BuyARig_4.Visible = false;
-            UpdateMoney();
+            handleRigClick(this.BuyARig_4, this.RigNumber4);
         }
 
         private void BuyARig_6_Click(object sender, EventArgs e) // buy a rig at pos 6
         {
-            UpdateRigData(this.player.BuyRig(BuyARig_6, RigNumber6));
-            this.RigNumber6.Visible = true;
-            this.BuyARig_6.Visible = false;
-            UpdateMoney();
+            handleRigClick(this.BuyARig_6, this.RigNumber6);
         }
 
         private void BuyARig_5_Click(object sender, EventArgs e) // buy a rig at pos 5
         {
-            UpdateRigData(this.player.BuyRig(BuyARig_5, RigNumber5));
-            this.RigNumber5.Visible = true;
-            this.BuyARig_5.Visible = false;
-            UpdateMoney();
+            handleRigClick(this.BuyARig_5, this.RigNumber5);
         }
 
         private void sellRig_Click(object sender, EventArgs e) // sell a rig
         {
-
+            // not needed for now
         }
 
         private void RigNumber1_Click(object sender, EventArgs e)
@@ -184,8 +162,8 @@ namespace OilTycoonGame
             Rig? rig = this.player.GetRig(0);
             if (rig != null)
             {
-                this.currentRig = rig;
-                UpdateRigData();
+                changeColors(rig!.instance);
+                UpdateRigData(rig);
             }
         }
 
@@ -194,8 +172,8 @@ namespace OilTycoonGame
             Rig? rig = this.player.GetRig(1);
             if (rig != null)
             {
-                this.currentRig = rig;
-                UpdateRigData();
+                changeColors(rig.instance);
+                UpdateRigData(rig);
             }
         }
 
@@ -204,8 +182,8 @@ namespace OilTycoonGame
             Rig? rig = this.player.GetRig(2);
             if (rig != null)
             {
-                this.currentRig = rig;
-                UpdateRigData();
+                changeColors(rig.instance);
+                UpdateRigData(rig);
             }
         }
 
@@ -214,8 +192,8 @@ namespace OilTycoonGame
             Rig? rig = this.player.GetRig(3);
             if (rig != null)
             {
-                this.currentRig = rig;
-                UpdateRigData();
+                changeColors(rig.instance);
+                UpdateRigData(rig);
             }
         }
 
@@ -224,8 +202,8 @@ namespace OilTycoonGame
             Rig? rig = this.player.GetRig(4);
             if (rig != null)
             {
-                this.currentRig = rig;
-                UpdateRigData();
+                changeColors(rig.instance);
+                UpdateRigData(rig);
             }
         }
 
@@ -234,8 +212,8 @@ namespace OilTycoonGame
             Rig? rig = this.player.GetRig(5);
             if (rig != null)
             {
-                this.currentRig = rig;
-                UpdateRigData();
+                changeColors(rig.instance);
+                UpdateRigData(rig);
             }
         }
     }

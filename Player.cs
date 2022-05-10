@@ -9,6 +9,7 @@ namespace OilTycoonGame
     {
         public PlayerData data = new PlayerData();
         public List<Rig> rigs = new List<Rig>();
+        public List<Refiner> refiners = new List<Refiner>();
         private int RigPrice = 10;
         private int RefinerPrice = 30;
 
@@ -50,6 +51,7 @@ namespace OilTycoonGame
             if (r.refiner == null && this.data.money >= this.RefinerPrice)
             {
                 r.AddRefiner();
+                refiners.Add(r.refiner);
                 this.data.RemoveMoney(RefinerPrice);
             }
         }

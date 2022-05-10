@@ -12,7 +12,8 @@ namespace OilTycoonGame
         public Refiner? refiner = null;
         private int totalMoneyEarned = 0;
         private System.Drawing.Bitmap? image = null;
-        private System.Windows.Forms.PictureBox? instance = null;
+        // public for changing background
+        public System.Windows.Forms.PictureBox? instance = null;
         public int id;
 
         public Rig(int id, System.Windows.Forms.PictureBox instance /*System.Windows.Forms.Button rigBtn*/)
@@ -45,7 +46,7 @@ namespace OilTycoonGame
             if (this.refiner == null)
             {
                 this.refiner = new Refiner();
-                moneyPerSecond *= 2;
+                this.moneyPerSecond = moneyPerSecond * 2;
             }
         }
         public void ChangeImage()
